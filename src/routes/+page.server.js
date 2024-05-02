@@ -4,9 +4,9 @@ export async function load() {
   let mysqlconn = await mysqlconnFn();
   try {
     let results = await mysqlconn
-      .query("SELECT * FROM room;")
+      .query("SELECT * FROM rooms;")
       .then(function ([rows, fields]) {
-        console.log(rows);
+        // console.log(rows);
         return rows;
       });
 

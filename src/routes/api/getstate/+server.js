@@ -5,7 +5,7 @@ export async function POST({ request }) {
   const { st } = await request.json();
   let mysqlconn = await mysqlconnFn();
   let results = await mysqlconn
-    .query("SELECT * FROM room")
+    .query("SELECT * FROM rooms")
     .then(function ([rows, fields]) {
       //     console.log("Got this far!!");
       //     console.log(rows);
